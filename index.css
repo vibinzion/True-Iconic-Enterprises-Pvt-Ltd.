@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    background: #EEF4FA;
+    min-height: 100vh;
+    color: #0A192F;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E2ECF7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E56A0;
+    border-radius: 9999px;
+    border: 2px solid #E2ECF7;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00D2FF;
+  }
+}
+
+@layer components {
+  /* Hero-Matching 3D Claymorphic White Card */
+  .clay-card-hero {
+    background: #FFFFFF;
+    border: 2px solid #D0E4FA;
+    box-shadow: 0 20px 50px rgba(14, 58, 115, 0.08);
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .clay-card-hero:hover {
+    transform: translateY(-6px);
+    border-color: #38BDF8;
+    box-shadow: 0 30px 60px rgba(14, 58, 115, 0.16);
+  }
+
+  /* 3D Glossy Royal-Blue & Cyan Icon Sphere */
+  .icon-sphere-pixar {
+    background: linear-gradient(135deg, #0052D4 0%, #00A8E8 100%);
+    box-shadow: 
+      0 10px 22px -5px rgba(0, 82, 212, 0.45),
+      inset 0 2px 4px rgba(255, 255, 255, 0.7),
+      inset 0 -3px 5px rgba(10, 25, 47, 0.3);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .icon-sphere-pixar:hover {
+    transform: scale(1.1) rotate(4deg);
+  }
+
+  /* Hero-Matching Circular Badge for 3D Floating Icons */
+  .clay-badge-pixar {
+    background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, #F5F9FD 60%, #E2ECF7 100%);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 
+      0 12px 24px -6px rgba(10, 25, 47, 0.12),
+      inset 0 3px 5px rgba(255, 255, 255, 1),
+      inset 0 -3px 5px rgba(30, 86, 160, 0.12);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .clay-badge-pixar:hover {
+    transform: scale(1.08) rotate(2deg);
+  }
+
+  /* 3D Blue Button Matching Hero */
+  .clay-btn-blue {
+    background: linear-gradient(135deg, #0D254C 0%, #0052D4 55%, #38BDF8 100%);
+    box-shadow: 
+      0 10px 24px -5px rgba(0, 82, 212, 0.45),
+      inset 0 2px 3px rgba(255, 255, 255, 0.45),
+      inset 0 -3px 5px rgba(10, 25, 47, 0.3);
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+  }
+
+  .clay-btn-blue:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 14px 28px -4px rgba(0, 82, 212, 0.6),
+      inset 0 3px 4px rgba(255, 255, 255, 0.6),
+      inset 0 -3px 5px rgba(10, 25, 47, 0.3);
+  }
+
+  /* Secondary Button */
+  .clay-btn-secondary {
+    background: #FFFFFF;
+    border: 2px solid #D0E4FA;
+    color: #0A192F;
+    box-shadow: 0 8px 18px -4px rgba(14, 58, 115, 0.08);
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+  }
+
+  .clay-btn-secondary:hover {
+    background: #F4F8FD;
+    border-color: #38BDF8;
+    color: #0052D4;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -4px rgba(0, 82, 212, 0.18);
+  }
+}
